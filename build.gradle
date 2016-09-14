@@ -1,0 +1,21 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+mainClassName = 'Main'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group:  'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile files('C:\\Program Files\\javax.servlet-api-3.1.0.jar')
+    compile files('C:\\Program Files\\jetty-all-9.2.13.v20150730.jar')
+}
